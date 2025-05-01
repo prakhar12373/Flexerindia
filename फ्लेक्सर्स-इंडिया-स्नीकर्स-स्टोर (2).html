@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlexersIndia - Premium Sneakers</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B00',secondary:'#4A90E2'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+background-color: #FAFAFA;
+}
+.category-tab.active {
+color: #FF6B00;
+border-bottom: 2px solid #FF6B00;
+}
+.size-option.selected {
+background-color: #FF6B00;
+color: white;
+}
+.payment-option.selected {
+border: 2px solid #FF6B00;
+}
+.payment-option.selected .check-icon {
+display: flex;
+}
+.product-card {
+transition: transform 0.3s ease;
+}
+.product-card:hover {
+transform: translateY(-5px);
+}
+.nav-content {
+padding-top: 60px;
+padding-bottom: 70px;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Navigation Bar -->
+<nav class="fixed top-0 w-full bg-white shadow-md z-50">
+<div class="flex items-center justify-between px-4 py-3">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-menu-line ri-lg cursor-pointer"></i>
+</div>
+<h1 class="text-primary text-2xl font-['Pacifico']">FlexersIndia</h1>
+<div class="flex items-center space-x-3">
+<div class="w-8 h-8 flex items-center justify-center cursor-pointer" id="profileBtn">
+<i class="ri-user-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center cursor-pointer" id="loginBtn">
+<i class="ri-login-box-line ri-lg"></i>
+</div>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 pb-2">
+<div class="relative">
+<input type="text" placeholder="Search for sneakers..." class="w-full py-2 pl-10 pr-4 rounded-full bg-gray-100 border-none focus:outline-none focus:ring-2 focus:ring-primary">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center">
+<i class="ri-search-line text-gray-500"></i>
+</div>
+</div>
+</div>
+<!-- Category Tabs -->
+<div class="overflow-x-auto whitespace-nowrap px-1 border-b">
+<div class="inline-flex">
+<button class="category-tab active px-4 py-2 text-sm font-medium" data-category="retro4">Retro 4</button>
+<button class="category-tab px-4 py-2 text-sm font-medium" data-category="travisScott">Travis Scott</button>
+<button class="category-tab px-4 py-2 text-sm font-medium" data-category="lowDunks">Low Dunks</button>
+<button class="category-tab px-4 py-2 text-sm font-medium" data-category="airJordans">Air Jordans</button>
+<button class="category-tab px-4 py-2 text-sm font-medium" data-category="adidas">Adidas</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="nav-content">
+<!-- Hero Banner -->
+<div class="px-4 py-3">
+<div class="relative rounded-lg overflow-hidden shadow-md">
+<img src="https://readdy.ai/api/search-image?query=premium%20sneakers%20collection%2C%20high-quality%20athletic%20footwear%2C%20modern%20sneaker%20display%20with%20soft%20lighting%2C%20clean%20minimalist%20background%2C%20professional%20product%20photography%2C%20high%20detail%2C%20sharp%20focus%2C%20no%20text%2C%20no%20people&width=800&height=400&seq=1&orientation=landscape" alt="Sneaker Collection" class="w-full h-40 object-cover">
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-4">
+<h2 class="text-white text-xl font-bold">Premium Sneakers</h2>
+<p class="text-white text-sm">New arrivals for May 2025</p>
+</div>
+</div>
+</div>
+<!-- Product Sections -->
+<section id="productContainer" class="px-4 py-4">
+<!-- Product grid will be loaded here -->
+<div id="retro4" class="product-section">
+<h2 class="text-lg font-bold mb-3">Retro 4 Collection</h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Products will be loaded here -->
+</div>
+</div>
+<div id="travisScott" class="product-section hidden">
+<h2 class="text-lg font-bold mb-3">Travis Scott Collection</h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Products will be loaded here -->
+</div>
+</div>
+<div id="lowDunks" class="product-section hidden">
+<h2 class="text-lg font-bold mb-3">Low Dunks Collection</h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Products will be loaded here -->
+</div>
+</div>
+<div id="airJordans" class="product-section hidden">
+<h2 class="text-lg font-bold mb-3">Air Jordans Collection</h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Products will be loaded here -->
+</div>
+</div>
+<div id="adidas" class="product-section hidden">
+<h2 class="text-lg font-bold mb-3">Adidas Collection</h2>
+<div class="grid grid-cols-2 gap-3">
+<!-- Products will be loaded here -->
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 w-full bg-white border-t shadow-lg z-40">
+<div class="grid grid-cols-5 py-2">
+<a href="#" class="flex flex-col items-center justify-center text-center">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-home-5-line"></i>
+</div>
+<span class="text-[10px] mt-1">Home</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-center">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-compass-3-line"></i>
+</div>
+<span class="text-[10px] mt-1">Explore</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-center">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-fire-line"></i>
+</div>
+<span class="text-[10px] mt-1">Trending</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-center" id="orderHistoryBtn">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-history-line"></i>
+</div>
+<span class="text-[10px] mt-1">Orders</span>
+</a>
+<a href="#" class="flex flex-col items-center justify-center text-center" id="profileNavBtn">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-user-line"></i>
+</div>
+<span class="text-[10px] mt-1">Profile</span>
+</a>
+</div>
+</div>
+<!-- Login Modal -->
+<div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+<div class="bg-white rounded-lg w-11/12 max-w-md p-5">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Login to FlexersIndia</h3>
+<button id="closeLoginModal" class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<form id="loginForm">
+<div class="mb-4">
+<label class="block text-sm font-medium mb-1">Email</label>
+<input type="email" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your email" required>
+</div>
+<div class="mb-4">
+<label class="block text-sm font-medium mb-1">Password</label>
+<input type="password" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Enter your password" required>
+</div>
+<button type="submit" class="w-full bg-primary text-white py-2 rounded-button font-medium cursor-pointer">Login</button>
+<div class="mt-3 text-center">
+<p class="text-sm">Don't have an account? <a href="#" class="text-primary">Sign up</a></p>
+</div>
+</form>
+</div>
+</div>
+<!-- Product Detail Modal -->
+<div id="productModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+<div class="bg-white rounded-lg w-11/12 max-h-[90vh] overflow-y-auto">
+<div class="relative">
+<div id="productImage" class="w-full h-64 bg-gray-100"></div>
+<button id="closeProductModal" class="absolute top-3 right-3 w-8 h-8 bg-white rounded-full shadow-md flex items-center justify-center cursor-pointer">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div class="p-4">
+<h3 id="productName" class="text-xl font-bold mb-1"></h3>
+<p id="productPrice" class="text-lg font-semibold text-primary mb-3"></p>
+<div class="mb-4">
+<h4 class="text-sm font-medium mb-2">Select Size (US)</h4>
+<div class="grid grid-cols-5 gap-2" id="sizeSelector">
+<button class="size-option border rounded-md py-2 text-center text-sm cursor-pointer" data-size="7">7</button>
+<button class="size-option border rounded-md py-2 text-center text-sm cursor-pointer" data-size="8">8</button>
+<button class="size-option border rounded-md py-2 text-center text-sm cursor-pointer" data-size="9">9</button>
+<button class="size-option border rounded-md py-2 text-center text-sm cursor-pointer" data-size="10">10</button>
+<button class="size-option border rounded-md py-2 text-center text-sm cursor-pointer" data-size="11">11</button>
+<button class="size-option border rounded-md py-2 text-center text-sm cursor-pointer" data-size="12">12</button>
+</div>
+</div>
+<div class="mb-4">
+<h4 class="text-sm font-medium mb-2">Description</h4>
+<p id="productDescription" class="text-sm text-gray-600"></p>
+</div>
+<button id="buyNowBtn" class="w-full bg-primary text-white py-3 rounded-button font-medium cursor-pointer">Buy Now</button>
+</div>
+</div>
+</div>
+<!-- Checkout Modal -->
+<div id="checkoutModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+<div class="bg-white rounded-lg w-11/12 max-h-[90vh] overflow-y-auto">
+<div class="p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Checkout</h3>
+<button id="closeCheckoutModal" class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div class="mb-4 p-3 bg-gray-50 rounded-lg">
+<div class="flex items-center">
+<div id="checkoutProductImage" class="w-16 h-16 bg-gray-200 rounded-md mr-3"></div>
+<div>
+<h4 id="checkoutProductName" class="font-medium"></h4>
+<div class="flex items-center text-sm text-gray-500">
+<span>Size: </span>
+<span id="checkoutProductSize" class="ml-1"></span>
+</div>
+<p id="checkoutProductPrice" class="font-semibold text-primary"></p>
+</div>
+</div>
+</div>
+<form id="checkoutForm">
+<h4 class="font-medium mb-2">Shipping Details</h4>
+<div class="space-y-3 mb-4">
+<div>
+<label class="block text-sm mb-1">Full Name</label>
+<input type="text" name="fullName" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div>
+<label class="block text-sm mb-1">Email</label>
+<input type="email" name="email" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div>
+<label class="block text-sm mb-1">Phone Number</label>
+<input type="tel" name="phone" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div>
+<label class="block text-sm mb-1">Address</label>
+<textarea name="address" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary" rows="2" required></textarea>
+</div>
+<div>
+<label class="block text-sm mb-1">PIN Code</label>
+<input type="text" name="pincode" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+</div>
+<h4 class="font-medium mb-2">Payment Method</h4>
+<div class="space-y-3 mb-4">
+<div id="upiOption" class="payment-option border rounded-lg p-3 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-3">
+<i class="ri-bank-card-line ri-lg"></i>
+</div>
+<span>UPI Payment</span>
+</div>
+<div class="check-icon w-6 h-6 bg-primary rounded-full text-white hidden items-center justify-center">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+<div id="whatsappOption" class="payment-option border rounded-lg p-3 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-3">
+<i class="ri-whatsapp-line ri-lg text-green-500"></i>
+</div>
+<span>Order through WhatsApp</span>
+</div>
+<div class="check-icon w-6 h-6 bg-primary rounded-full text-white hidden items-center justify-center">
+<i class="ri-check-line"></i>
+</div>
+</div>
+</div>
+</div>
+<button type="submit" id="proceedToPayBtn" class="w-full bg-gray-300 text-gray-600 py-3 rounded-button font-medium cursor-not-allowed" disabled>Proceed to Pay</button>
+</form>
+</div>
+</div>
+</div>
+<!-- UPI Payment Modal -->
+<div id="upiModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+<div class="bg-white rounded-lg w-11/12 p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Secure Payment</h3>
+<button id="closeUpiModal" class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div class="bg-primary/10 rounded-lg p-4 mb-4">
+<div class="flex justify-between items-center">
+<span class="text-sm">Amount to Pay</span>
+<span id="upiAmount" class="font-bold"></span>
+</div>
+</div>
+<div class="border-t border-b py-4 mb-4">
+<div class="flex items-center justify-between mb-3">
+<span class="text-sm font-medium">Payment Status</span>
+<span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">Pending</span>
+</div>
+<div class="text-xs text-gray-500">
+Transaction ID: <span id="transactionId"></span>
+</div>
+</div>
+<div class="mb-4">
+<div class="flex items-center justify-center mb-3">
+<img src="https://static.readdy.ai/image/b440751996208357ceb298c68cf64f23/9a3317a6602e6159cc21c054f1e8f277.jpeg" alt="UPI QR Code" class="w-48 h-48">
+</div>
+<p class="text-center text-sm text-gray-600 mb-3">Scan the QR code with any UPI app</p>
+<div class="text-center">
+<span class="text-sm font-medium">OR</span>
+</div>
+<div class="mt-3">
+<label class="block text-sm mb-1">Enter UPI ID</label>
+<div class="flex">
+<input type="text" id="upiInput" class="flex-1 p-2 border rounded-l focus:outline-none focus:ring-2 focus:ring-primary" placeholder="yourname@upi">
+<button id="upiPayBtn" class="bg-primary text-white px-4 rounded-r">Pay</button>
+</div>
+<p id="upiError" class="text-red-500 text-sm mt-1 hidden"></p>
+</div>
+<div class="flex flex-wrap justify-center gap-2 mt-4">
+<button class="p-2 border rounded">
+<img src="https://readdy.ai/api/search-image?query=Google%20Pay%20logo%2C%20simple%20icon%2C%20minimal%20design%2C%20clean%20background&width=40&height=40&seq=3&orientation=squarish" alt="Google Pay" class="w-8 h-8">
+</button>
+<button class="p-2 border rounded">
+<img src="https://readdy.ai/api/search-image?query=PhonePe%20logo%2C%20simple%20icon%2C%20minimal%20design%2C%20clean%20background&width=40&height=40&seq=4&orientation=squarish" alt="PhonePe" class="w-8 h-8">
+</button>
+<button class="p-2 border rounded">
+<img src="https://readdy.ai/api/search-image?query=Paytm%20logo%2C%20simple%20icon%2C%20minimal%20design%2C%20clean%20background&width=40&height=40&seq=5&orientation=squarish" alt="Paytm" class="w-8 h-8">
+</button>
+<button class="p-2 border rounded">
+<img src="https://readdy.ai/api/search-image?query=Amazon%20Pay%20logo%2C%20simple%20icon%2C%20minimal%20design%2C%20clean%20background&width=40&height=40&seq=6&orientation=squarish" alt="Amazon Pay" class="w-8 h-8">
+</button>
+</div>
+</div>
+<button id="confirmPaymentBtn" class="w-full bg-primary text-white py-3 rounded-button font-medium cursor-pointer">Confirm Payment</button>
+</div>
+</div>
+<!-- Order Success Modal -->
+<div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+<div class="bg-white rounded-lg w-11/12 p-5 text-center">
+<div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-check-line ri-2x text-green-500"></i>
+</div>
+<h3 class="text-xl font-bold mb-2">Order Placed Successfully!</h3>
+<p class="text-gray-600 mb-4">Thank you for shopping with FlexersIndia.</p>
+<p class="text-sm text-gray-500 mb-4">Order ID: <span id="orderIdDisplay"></span></p>
+<button id="continueShoppingBtn" class="w-full bg-primary text-white py-3 rounded-button font-medium cursor-pointer">Continue Shopping</button>
+</div>
+</div>
+<!-- Order History Modal -->
+<div id="orderHistoryModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+<div class="bg-white rounded-lg w-11/12 max-h-[90vh] overflow-y-auto">
+<div class="p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">Order History</h3>
+<button id="closeOrderHistoryModal" class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div id="orderList" class="space-y-3">
+<!-- Order history will be loaded here -->
+<div class="text-center text-gray-500 py-8">
+<div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
+<i class="ri-shopping-bag-line ri-2x text-gray-400"></i>
+</div>
+<p>No orders yet</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Profile Modal -->
+<div id="profileModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+<div class="bg-white rounded-lg w-11/12 max-h-[90vh] overflow-y-auto">
+<div class="p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-bold">My Profile</h3>
+<button id="closeProfileModal" class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+<div class="flex flex-col items-center mb-6">
+<div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mb-3">
+<i class="ri-user-line ri-2x text-gray-400"></i>
+</div>
+<h4 class="font-medium">Guest User</h4>
+<p class="text-sm text-gray-500">Please login to access your profile</p>
+</div>
+<div class="space-y-3">
+<button class="w-full flex items-center justify-between p-3 border rounded-lg">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-3">
+<i class="ri-history-line"></i>
+</div>
+<span>Order History</span>
+</div>
+<i class="ri-arrow-right-s-line"></i>
+</button>
+<button class="w-full flex items-center justify-between p-3 border rounded-lg">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-3">
+<i class="ri-heart-line"></i>
+</div>
+<span>Wishlist</span>
+</div>
+<i class="ri-arrow-right-s-line"></i>
+</button>
+<button class="w-full flex items-center justify-between p-3 border rounded-lg">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-3">
+<i class="ri-map-pin-line"></i>
+</div>
+<span>Saved Addresses</span>
+</div>
+<i class="ri-arrow-right-s-line"></i>
+</button>
+<button class="w-full flex items-center justify-between p-3 border rounded-lg">
+<div class="flex items-center">
+<div class="w-8 h-8 flex items-center justify-center mr-3">
+<i class="ri-settings-line"></i>
+</div>
+<span>Settings</span>
+</div>
+<i class="ri-arrow-right-s-line"></i>
+</button>
+<button id="loginProfileBtn" class="w-full bg-primary text-white py-3 rounded-button font-medium cursor-pointer mt-4">Login</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Product Data
+const products = {
+retro4: [
+{
+id: 'r1',
+name: 'Air Jordan 4 Military Black',
+price: 5499,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%204%20Military%20Black%20sneakers%2C%20professional%20product%20photography%2C%20white%20and%20black%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=7&orientation=landscape',
+description: 'The Air Jordan 4 Military Black features a clean white leather upper with black and neutral grey accents. This classic colorway offers versatile styling options while maintaining the iconic silhouette design.'
+},
+{
+id: 'r2',
+name: 'Air Jordan 4 White Green',
+price: 4999,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%204%20White%20Green%20sneakers%2C%20professional%20product%20photography%2C%20white%20and%20green%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=8&orientation=landscape',
+description: 'The Air Jordan 4 White Green combines a pristine white leather upper with vibrant green accents. This refreshing colorway provides a bold yet versatile look for any sneaker enthusiast.'
+},
+{
+id: 'r3',
+name: 'Air Jordan 4 Black Cat',
+price: 5899,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%204%20Black%20Cat%20sneakers%2C%20professional%20product%20photography%2C%20all%20black%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=9&orientation=landscape',
+description: 'The Air Jordan 4 Black Cat features an all-black nubuck upper with matching details throughout. This stealthy colorway offers a sleek and sophisticated look that pairs with anything in your wardrobe.'
+},
+{
+id: 'r4',
+name: 'Air Jordan 4 Fear Pack',
+price: 5799,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%204%20Fear%20Pack%20sneakers%2C%20professional%20product%20photography%2C%20dark%20grey%20and%20black%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=10&orientation=landscape',
+description: 'The Air Jordan 4 Fear Pack showcases a cool grey, black, and white color scheme. Part of the legendary Fear Pack, these sneakers feature premium materials and subtle details that make them a collector\'s favorite.'
+},
+{
+id: 'r5',
+name: 'Air Jordan 4 Panda',
+price: 4799,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%204%20Panda%20sneakers%2C%20professional%20product%20photography%2C%20black%20and%20white%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=11&orientation=landscape',
+description: 'The Air Jordan 4 Panda features a clean black and white color blocking that resembles the popular panda theme. With premium leather construction and iconic details, this versatile colorway is perfect for everyday wear.'
+},
+{
+id: 'r6',
+name: 'Air Jordan 4 Fire Red',
+price: 5299,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%204%20Fire%20Red%20sneakers%2C%20professional%20product%20photography%2C%20white%20and%20red%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=12&orientation=landscape',
+description: 'The Air Jordan 4 Fire Red is a classic colorway featuring a white leather upper with fire red and black accents. This OG colorway remains one of the most iconic designs in the Jordan lineup.'
+}
+],
+travisScott: [
+{
+id: 't1',
+name: 'Travis Scott x Air Jordan 1 Low Reverse Mocha',
+price: 5899,
+image: 'https://readdy.ai/api/search-image?query=Travis%20Scott%20x%20Air%20Jordan%201%20Low%20Reverse%20Mocha%20sneakers%2C%20professional%20product%20photography%2C%20brown%20and%20white%20colorway%20with%20reversed%20swoosh%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=13&orientation=landscape',
+description: 'The Travis Scott x Air Jordan 1 Low Reverse Mocha features a brown and white color scheme with the iconic reversed swoosh. This highly sought-after collaboration combines premium materials with unique design elements.'
+},
+{
+id: 't2',
+name: 'Travis Scott x Air Jordan 1 Low Canary',
+price: 5499,
+image: 'https://readdy.ai/api/search-image?query=Travis%20Scott%20x%20Air%20Jordan%201%20Low%20Canary%20sneakers%2C%20professional%20product%20photography%2C%20yellow%20and%20brown%20colorway%20with%20reversed%20swoosh%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=14&orientation=landscape',
+description: 'The Travis Scott x Air Jordan 1 Low Canary showcases a vibrant yellow upper with brown accents and the signature reversed swoosh. This eye-catching colorway stands out in any sneaker collection.'
+},
+{
+id: 't3',
+name: 'Travis Scott x Fragment Low',
+price: 5999,
+image: 'https://readdy.ai/api/search-image?query=Travis%20Scott%20x%20Fragment%20Low%20sneakers%2C%20professional%20product%20photography%2C%20blue%20and%20white%20colorway%20with%20reversed%20swoosh%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=15&orientation=landscape',
+description: 'The Travis Scott x Fragment Low is a three-way collaboration featuring a blue, white, and black color scheme with both Travis Scott and Fragment Design details. This highly coveted sneaker combines premium craftsmanship with exclusive design elements.'
+},
+{
+id: 't4',
+name: 'Travis Scott x Air Jordan 1 Low Grey White',
+price: 5299,
+image: 'https://readdy.ai/api/search-image?query=Travis%20Scott%20x%20Air%20Jordan%201%20Low%20Grey%20White%20sneakers%2C%20professional%20product%20photography%2C%20grey%20and%20white%20colorway%20with%20reversed%20swoosh%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=16&orientation=landscape',
+description: 'The Travis Scott x Air Jordan 1 Low Grey White features a clean grey and white color palette with the signature reversed swoosh. This understated colorway offers versatile styling options while maintaining the distinctive Travis Scott design.'
+},
+{
+id: 't5',
+name: 'Travis Scott x Air Jordan 1 Low Olive',
+price: 5699,
+image: 'https://readdy.ai/api/search-image?query=Travis%20Scott%20x%20Air%20Jordan%201%20Low%20Olive%20sneakers%2C%20professional%20product%20photography%2C%20olive%20green%20colorway%20with%20reversed%20swoosh%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=17&orientation=landscape',
+description: 'The Travis Scott x Air Jordan 1 Low Olive showcases a military-inspired olive green color scheme with the iconic reversed swoosh. This earthy colorway provides a unique addition to the Travis Scott collection.'
+},
+{
+id: 't6',
+name: 'Travis Scott x Air Jordan 1 Low Brown',
+price: 5399,
+image: 'https://readdy.ai/api/search-image?query=Travis%20Scott%20x%20Air%20Jordan%201%20Low%20Brown%20sneakers%2C%20professional%20product%20photography%2C%20brown%20colorway%20with%20reversed%20swoosh%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=18&orientation=landscape',
+description: 'The Travis Scott x Air Jordan 1 Low Brown features a rich brown upper with contrasting details and the signature reversed swoosh. This earthy colorway offers a sophisticated look with the unmistakable Travis Scott aesthetic.'
+}
+],
+lowDunks: [
+{
+id: 'd1',
+name: 'Nike Dunk Low AE86',
+price: 3999,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20AE86%20sneakers%2C%20professional%20product%20photography%2C%20black%20and%20white%20colorway%20inspired%20by%20Initial%20D%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=19&orientation=landscape',
+description: 'The Nike Dunk Low AE86 draws inspiration from the iconic Toyota AE86 from Initial D, featuring a black and white color scheme with unique details. This special edition combines sneaker culture with automotive nostalgia.'
+},
+{
+id: 'd2',
+name: 'Nike Dunk Low Otomo Bear',
+price: 4299,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20Otomo%20Bear%20sneakers%2C%20professional%20product%20photography%2C%20colorful%20design%20with%20bear%20graphics%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=20&orientation=landscape',
+description: 'The Nike Dunk Low Otomo Bear features playful bear graphics and a colorful design inspired by Katsuhiro Otomo\'s work. This unique collaboration brings artistic flair to the classic Dunk silhouette.'
+},
+{
+id: 'd3',
+name: 'Nike Dunk Low Reverse Panda',
+price: 3799,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20Reverse%20Panda%20sneakers%2C%20professional%20product%20photography%2C%20white%20and%20black%20colorway%20reversed%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=21&orientation=landscape',
+description: 'The Nike Dunk Low Reverse Panda flips the popular Panda colorway, featuring a primarily white upper with black overlays. This versatile design offers a fresh take on the classic black and white color blocking.'
+},
+{
+id: 'd4',
+name: 'Nike Dunk Low White Green',
+price: 3599,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20White%20Green%20sneakers%2C%20professional%20product%20photography%2C%20white%20and%20green%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=22&orientation=landscape',
+description: 'The Nike Dunk Low White Green features a clean white leather base with vibrant green overlays. This classic two-tone color blocking showcases the timeless appeal of the Dunk silhouette.'
+},
+{
+id: 'd5',
+name: 'Nike Dunk Low Blue',
+price: 3699,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20Blue%20sneakers%2C%20professional%20product%20photography%2C%20white%20and%20blue%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=23&orientation=landscape',
+description: 'The Nike Dunk Low Blue combines a white leather base with striking blue overlays. This classic university-inspired colorway offers a clean and versatile look for any occasion.'
+},
+{
+id: 'd6',
+name: 'Nike Dunk Low Mocha',
+price: 3999,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20Mocha%20sneakers%2C%20professional%20product%20photography%2C%20brown%20and%20cream%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=24&orientation=landscape',
+description: 'The Nike Dunk Low Mocha features a cream-colored base with rich brown overlays. This coffee-inspired colorway provides a sophisticated aesthetic that pairs well with various outfits.'
+},
+{
+id: 'd7',
+name: 'Nike Dunk Low Red Black Toe',
+price: 3899,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20Red%20Black%20Toe%20sneakers%2C%20professional%20product%20photography%2C%20red%2C%20black%2C%20and%20white%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=25&orientation=landscape',
+description: 'The Nike Dunk Low Red Black Toe features a white base with red and black overlays in the iconic "Black Toe" pattern. This classic color blocking draws inspiration from vintage basketball designs.'
+},
+{
+id: 'd8',
+name: 'Nike Dunk Low Grey Sky',
+price: 3699,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20Grey%20Sky%20sneakers%2C%20professional%20product%20photography%2C%20grey%20and%20light%20blue%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=26&orientation=landscape',
+description: 'The Nike Dunk Low Grey Sky combines soft grey tones with light blue accents. This subtle colorway offers a calming aesthetic that works well with a variety of styles.'
+},
+{
+id: 'd9',
+name: 'Nike Dunk Low Grey Panda',
+price: 3799,
+image: 'https://readdy.ai/api/search-image?query=Nike%20Dunk%20Low%20Grey%20Panda%20sneakers%2C%20professional%20product%20photography%2C%20grey%20and%20white%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=27&orientation=landscape',
+description: 'The Nike Dunk Low Grey Panda features a white base with grey overlays in the popular panda-style color blocking. This neutral colorway offers a versatile option for everyday wear.'
+}
+],
+airJordans: [
+{
+id: 'j1',
+name: 'Air Jordan 1 Low Year of the Dragon',
+price: 4599,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%201%20Low%20Year%20of%20the%20Dragon%20sneakers%2C%20professional%20product%20photography%2C%20red%20and%20gold%20colorway%20with%20dragon%20details%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=28&orientation=landscape',
+description: 'The Air Jordan 1 Low Year of the Dragon celebrates the lunar new year with special dragon-inspired details and a red and gold color scheme. This limited edition release combines cultural elements with the classic Jordan silhouette.'
+},
+{
+id: 'j2',
+name: 'Air Jordan 1 Low Royal Toe',
+price: 4299,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%201%20Low%20Royal%20Toe%20sneakers%2C%20professional%20product%20photography%2C%20black%2C%20white%2C%20and%20royal%20blue%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=29&orientation=landscape',
+description: 'The Air Jordan 1 Low Royal Toe features a black and white leather upper with royal blue accents on the toe box and heel. This classic color blocking adapts the iconic Royal colorway to the low-top silhouette.'
+},
+{
+id: 'j3',
+name: 'Air Jordan 1 High Hyper Royal',
+price: 5299,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%201%20High%20Hyper%20Royal%20sneakers%2C%20professional%20product%20photography%2C%20white%20and%20hyper%20royal%20blue%20colorway%20with%20worn%20look%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=30&orientation=landscape',
+description: 'The Air Jordan 1 High Hyper Royal showcases a white leather base with washed hyper royal blue suede overlays. This distinctive colorway offers a unique worn-in aesthetic that stands out from traditional Jordan 1 designs.'
+},
+{
+id: 'j4',
+name: 'Air Jordan 1 High University Blue',
+price: 5499,
+image: 'https://readdy.ai/api/search-image?query=Air%20Jordan%201%20High%20University%20Blue%20sneakers%2C%20professional%20product%20photography%2C%20white%20and%20university%20blue%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=31&orientation=landscape',
+description: 'The Air Jordan 1 High University Blue features a white leather base with university blue overlays. This UNC-inspired colorway pays homage to Michael Jordan\'s college days with a clean and timeless design.'
+}
+],
+adidas: [
+{
+id: 'a1',
+name: 'Adidas Samba White Green',
+price: 3899,
+image: 'https://readdy.ai/api/search-image?query=Adidas%20Samba%20White%20Green%20sneakers%2C%20professional%20product%20photography%2C%20white%20with%20green%20stripes%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=32&orientation=landscape',
+description: 'The Adidas Samba White Green features a clean white leather upper with green accents and the iconic gum sole. This classic silhouette combines retro soccer heritage with contemporary street style.'
+},
+{
+id: 'a2',
+name: 'Adidas Samba Black',
+price: 3799,
+image: 'https://readdy.ai/api/search-image?query=Adidas%20Samba%20Black%20sneakers%2C%20professional%20product%20photography%2C%20all%20black%20colorway%20with%20gum%20sole%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=33&orientation=landscape',
+description: 'The Adidas Samba Black showcases an all-black leather upper with contrasting white stripes and the signature gum sole. This sleek colorway offers a sophisticated take on the classic Samba design.'
+},
+{
+id: 'a3',
+name: 'Adidas Samba White',
+price: 3699,
+image: 'https://readdy.ai/api/search-image?query=Adidas%20Samba%20White%20sneakers%2C%20professional%20product%20photography%2C%20white%20with%20black%20stripes%20colorway%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=34&orientation=landscape',
+description: 'The Adidas Samba White features a clean white leather upper with black stripes and the classic gum sole. This timeless colorway provides a versatile option that pairs with virtually any outfit.'
+},
+{
+id: 'a4',
+name: 'Adidas Yeezy Boost 350 Grey',
+price: 5299,
+image: 'https://readdy.ai/api/search-image?query=Adidas%20Yeezy%20Boost%20350%20Grey%20sneakers%2C%20professional%20product%20photography%2C%20grey%20colorway%20with%20distinctive%20pattern%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=35&orientation=landscape',
+description: 'The Adidas Yeezy Boost 350 Grey features a grey Primeknit upper with the distinctive pattern and full-length Boost cushioning. This comfortable and stylish design showcases Kanye West\'s influential aesthetic.'
+},
+{
+id: 'a5',
+name: 'Adidas Yeezy Boost 350 White',
+price: 5499,
+image: 'https://readdy.ai/api/search-image?query=Adidas%20Yeezy%20Boost%20350%20White%20sneakers%2C%20professional%20product%20photography%2C%20white%20colorway%20with%20distinctive%20pattern%2C%20high-quality%20athletic%20footwear%2C%20clean%20background%2C%20detailed%20texture%2C%20side%20view%2C%20premium%20sneaker%2C%20isolated%20product&width=400&height=300&seq=36&orientation=landscape',
+description: 'The Adidas Yeezy Boost 350 White showcases a clean white Primeknit upper with subtle pattern details and responsive Boost cushioning. This minimalist colorway offers a fresh take on the popular Yeezy silhouette.'
+}
+]
+};
+// Variables to store selected product and size
+let selectedProduct = null;
+let selectedSize = null;
+let selectedPaymentMethod = null;
+let orders = [];
+// Load products for initial category
+loadProducts('retro4');
+// Category tab switching
+const categoryTabs = document.querySelectorAll('.category-tab');
+categoryTabs.forEach(tab => {
+tab.addEventListener('click', function() {
+// Remove active class from all tabs
+categoryTabs.forEach(t => t.classList.remove('active'));
+// Add active class to clicked tab
+this.classList.add('active');
+// Load products for selected category
+const category = this.getAttribute('data-category');
+loadProducts(category);
+// Hide all product sections
+document.querySelectorAll('.product-section').forEach(section => {
+section.classList.add('hidden');
+});
+// Show selected product section
+document.getElementById(category).classList.remove('hidden');
+});
+});
+// Function to load products
+function loadProducts(category) {
+const productGrid = document.querySelector(`#${category} .grid`);
+productGrid.innerHTML = '';
+products[category].forEach(product => {
+const productCard = document.createElement('div');
+productCard.className = 'product-card bg-white rounded-lg shadow-md overflow-hidden';
+productCard.innerHTML = `
+<div class="relative h-36 bg-gray-100 overflow-hidden">
+<img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover">
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium truncate">${product.name}</h3>
+<p class="text-primary font-semibold mt-1">₹${product.price.toLocaleString()}</p>
+<button class="w-full bg-primary text-white py-2 rounded-button text-sm font-medium mt-2 cursor-pointer buy-btn" data-id="${product.id}" data-category="${category}">Buy Now</button>
+</div>
+`;
+productGrid.appendChild(productCard);
+// Add click event to Buy Now button
+const buyBtn = productCard.querySelector('.buy-btn');
+buyBtn.addEventListener('click', function() {
+const productId = this.getAttribute('data-id');
+const productCategory = this.getAttribute('data-category');
+const product = products[productCategory].find(p => p.id === productId);
+openProductModal(product);
+});
+});
+}
+// Function to open product modal
+function openProductModal(product) {
+selectedProduct = product;
+selectedSize = null;
+document.getElementById('productName').textContent = product.name;
+document.getElementById('productPrice').textContent = `₹${product.price.toLocaleString()}`;
+document.getElementById('productDescription').textContent = product.description;
+document.getElementById('productImage').style.backgroundImage = `url(${product.image})`;
+document.getElementById('productImage').style.backgroundSize = 'cover';
+document.getElementById('productImage').style.backgroundPosition = 'center';
+// Reset size selection
+const sizeOptions = document.querySelectorAll('.size-option');
+sizeOptions.forEach(option => {
+option.classList.remove('selected');
+});
+// Show product modal
+document.getElementById('productModal').classList.remove('hidden');
+}
+// Size selection
+const sizeOptions = document.querySelectorAll('.size-option');
+sizeOptions.forEach(option => {
+option.addEventListener('click', function() {
+// Remove selected class from all options
+sizeOptions.forEach(opt => opt.classList.remove('selected'));
+// Add selected class to clicked option
+this.classList.add('selected');
+// Store selected size
+selectedSize = this.getAttribute('data-size');
+});
+});
+// Buy Now button in product modal
+document.getElementById('buyNowBtn').addEventListener('click', function() {
+if (!selectedSize) {
+// Show size selection error
+const sizeSelector = document.getElementById('sizeSelector');
+sizeSelector.classList.add('ring-2', 'ring-red-500');
+setTimeout(() => {
+sizeSelector.classList.remove('ring-2', 'ring-red-500');
+}, 2000);
+return;
+}
+// Close product modal
+document.getElementById('productModal').classList.add('hidden');
+// Open checkout modal
+openCheckoutModal();
+});
+// Function to open checkout modal
+function openCheckoutModal() {
+document.getElementById('checkoutProductName').textContent = selectedProduct.name;
+document.getElementById('checkoutProductSize').textContent = `US ${selectedSize}`;
+document.getElementById('checkoutProductPrice').textContent = `₹${selectedProduct.price.toLocaleString()}`;
+document.getElementById('checkoutProductImage').style.backgroundImage = `url(${selectedProduct.image})`;
+document.getElementById('checkoutProductImage').style.backgroundSize = 'cover';
+document.getElementById('checkoutProductImage').style.backgroundPosition = 'center';
+// Reset payment method selection
+const paymentOptions = document.querySelectorAll('.payment-option');
+paymentOptions.forEach(option => {
+option.classList.remove('selected');
+});
+selectedPaymentMethod = null;
+// Disable proceed button
+const proceedBtn = document.getElementById('proceedToPayBtn');
+proceedBtn.classList.remove('bg-primary', 'text-white');
+proceedBtn.classList.add('bg-gray-300', 'text-gray-600', 'cursor-not-allowed');
+proceedBtn.disabled = true;
+// Show checkout modal
+document.getElementById('checkoutModal').classList.remove('hidden');
+}
+// Payment method selection
+const paymentOptions = document.querySelectorAll('.payment-option');
+paymentOptions.forEach(option => {
+option.addEventListener('click', function() {
+// Remove selected class from all options
+paymentOptions.forEach(opt => opt.classList.remove('selected'));
+// Add selected class to clicked option
+this.classList.add('selected');
+// Store selected payment method
+selectedPaymentMethod = this.id === 'upiOption' ? 'upi' : 'whatsapp';
+// Enable proceed button
+const proceedBtn = document.getElementById('proceedToPayBtn');
+proceedBtn.classList.remove('bg-gray-300', 'text-gray-600', 'cursor-not-allowed');
+proceedBtn.classList.add('bg-primary', 'text-white', 'cursor-pointer');
+proceedBtn.disabled = false;
+});
+});
+// Proceed to Pay button
+document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+e.preventDefault();
+// Get form data
+const formData = new FormData(this);
+const customerData = {
+fullName: formData.get('fullName'),
+email: formData.get('email'),
+phone: formData.get('phone'),
+address: formData.get('address'),
+pincode: formData.get('pincode')
+};
+// Close checkout modal
+document.getElementById('checkoutModal').classList.add('hidden');
+// Process payment based on selected method
+if (selectedPaymentMethod === 'upi') {
+openUpiModal();
+} else if (selectedPaymentMethod === 'whatsapp') {
+processWhatsAppOrder(customerData);
+}
+});
+// Function to validate UPI ID
+function validateUpiId(upiId) {
+const upiRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z]{3,}$/;
+return upiRegex.test(upiId);
+}
+// Function to open UPI payment modal
+function openUpiModal() {
+const amount = selectedProduct.price;
+const orderId = 'PAY' + Date.now().toString().slice(-6);
+document.getElementById('upiAmount').textContent = `₹${amount.toLocaleString()}`;
+// Add UPI Pay button click handler
+document.getElementById('upiPayBtn').addEventListener('click', function() {
+const upiInput = document.getElementById('upiInput');
+const upiError = document.getElementById('upiError');
+const upiId = upiInput.value.trim();
+if (!upiId) {
+upiError.textContent = 'Please enter UPI ID';
+upiError.classList.remove('hidden');
+return;
+}
+if (!validateUpiId(upiId)) {
+upiError.textContent = 'Please enter a valid UPI ID';
+upiError.classList.remove('hidden');
+return;
+}
+upiError.classList.add('hidden');
+const payBtn = this;
+const originalText = payBtn.innerHTML;
+// Show loading spinner
+payBtn.disabled = true;
+payBtn.innerHTML = `
+<div class="flex items-center justify-center">
+<div class="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent"></div>
+</div>
+`;
+// Simulate payment processing
+setTimeout(() => {
+payBtn.disabled = false;
+payBtn.innerHTML = originalText;
+// Close UPI modal and show success
+document.getElementById('upiModal').classList.add('hidden');
+showSuccessModal();
+// Create order record
+const formData = new FormData(document.getElementById('checkoutForm'));
+const customerData = {
+fullName: formData.get('fullName'),
+email: formData.get('email'),
+phone: formData.get('phone'),
+address: formData.get('address'),
+pincode: formData.get('pincode'),
+transactionId: 'UPI_' + Math.random().toString(36).substr(2, 9)
+};
+createOrderRecord(customerData, 'UPI');
+}, 1500);
+});
+// Create payment session
+const paymentSession = {
+key: 'pay_' + Math.random().toString(36).substr(2, 9),
+amount: amount * 100, // Amount in paise
+currency: 'INR',
+orderId: orderId,
+name: 'FlexersIndia',
+description: `Payment for ${selectedProduct.name}`,
+prefill: {
+name: document.querySelector('input[name="fullName"]').value,
+email: document.querySelector('input[name="email"]').value,
+contact: document.querySelector('input[name="phone"]').value
+}
+};
+// Store payment session
+window.paymentSession = paymentSession;
+// Show payment modal
+document.getElementById('upiModal').classList.remove('hidden');
+}
+// Function to process WhatsApp order
+function processWhatsAppOrder(customerData) {
+const message = encodeURIComponent(
+`*New Order from FlexersIndia*\n\n` +
+`*Product:* ${selectedProduct.name}\n` +
+`*Size:* US ${selectedSize}\n` +
+`*Price:* ₹${selectedProduct.price.toLocaleString()}\n\n` +
+`*Customer Details:*\n` +
+`Name: ${customerData.fullName}\n` +
+`Email: ${customerData.email}\n` +
+`Phone: ${customerData.phone}\n` +
+`Address: ${customerData.address}\n` +
+`PIN Code: ${customerData.pincode}`
+);
+// Create order record
+createOrderRecord(customerData, 'WhatsApp');
+// Open WhatsApp with pre-filled message
+window.open(`https://wa.me/+919334825066?text=${message}`, '_blank');
+// Show success modal
+showSuccessModal();
+}
+// Confirm Payment button in UPI modal
+document.getElementById('confirmPaymentBtn').addEventListener('click', function() {
+const paymentSession = window.paymentSession;
+// Simulate payment processing
+document.getElementById('confirmPaymentBtn').disabled = true;
+document.getElementById('confirmPaymentBtn').innerHTML = `
+<div class="flex items-center justify-center">
+<div class="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent mr-2"></div>
+Processing...
+</div>
+`;
+// Simulate API call delay
+setTimeout(() => {
+const success = Math.random() > 0.1; // 90% success rate
+if (success) {
+// Payment successful
+const formData = new FormData(document.getElementById('checkoutForm'));
+const customerData = {
+fullName: formData.get('fullName'),
+email: formData.get('email'),
+phone: formData.get('phone'),
+address: formData.get('address'),
+pincode: formData.get('pincode'),
+transactionId: 'TXN_' + Math.random().toString(36).substr(2, 9)
+};
+createOrderRecord(customerData, 'UPI');
+document.getElementById('upiModal').classList.add('hidden');
+showSuccessModal();
+sendAdminNotification(customerData);
+} else {
+// Payment failed
+document.getElementById('confirmPaymentBtn').disabled = false;
+document.getElementById('confirmPaymentBtn').textContent = 'Retry Payment';
+// Show error message
+const errorDiv = document.createElement('div');
+errorDiv.className = 'text-red-500 text-sm mt-2 text-center';
+errorDiv.textContent = 'Payment failed. Please try again.';
+document.getElementById('confirmPaymentBtn').parentNode.appendChild(errorDiv);
+// Remove error message after 3 seconds
+setTimeout(() => {
+errorDiv.remove();
+}, 3000);
+}
+}, 2000);
+});
+// Function to create order record
+function createOrderRecord(customerData, paymentMethod) {
+const orderId = 'FI' + Date.now().toString().slice(-6);
+const orderDate = new Date();
+const order = {
+id: orderId,
+product: selectedProduct,
+size: selectedSize,
+customerData: customerData,
+paymentMethod: paymentMethod,
+date: orderDate,
+status: 'Processing'
+};
+// Add to orders array
+orders.unshift(order);
+// Store order ID for display
+document.getElementById('orderIdDisplay').textContent = orderId;
+}
+// Function to show success modal
+function showSuccessModal() {
+document.getElementById('successModal').classList.remove('hidden');
+}
+// Function to send admin notification (simulated)
+function sendAdminNotification(customerData) {
+console.log(`Email notification sent to kashprakhar98@gmail.com with order details:
+Product: ${selectedProduct.name}
+Size: US ${selectedSize}
+Customer: ${customerData.fullName}
+Email: ${customerData.email}
+Phone: ${customerData.phone}
+Address: ${customerData.address}
+PIN Code: ${customerData.pincode}
+Payment Method: ${selectedPaymentMethod.toUpperCase()}
+Order Date: ${new Date().toLocaleString()}`);
+}
+// Continue Shopping button
+document.getElementById('continueShoppingBtn').addEventListener('click', function() {
+document.getElementById('successModal').classList.add('hidden');
+});
+// Close buttons for modals
+document.getElementById('closeProductModal').addEventListener('click', function() {
+document.getElementById('productModal').classList.add('hidden');
+});
+document.getElementById('closeCheckoutModal').addEventListener('click', function() {
+document.getElementById('checkoutModal').classList.add('hidden');
+});
+document.getElementById('closeUpiModal').addEventListener('click', function() {
+document.getElementById('upiModal').classList.add('hidden');
+});
+document.getElementById('closeOrderHistoryModal').addEventListener('click', function() {
+document.getElementById('orderHistoryModal').classList.add('hidden');
+});
+document.getElementById('closeProfileModal').addEventListener('click', function() {
+document.getElementById('profileModal').classList.add('hidden');
+});
+document.getElementById('closeLoginModal').addEventListener('click', function() {
+document.getElementById('loginModal').classList.add('hidden');
+});
+// Login buttons
+document.getElementById('loginBtn').addEventListener('click', function() {
+document.getElementById('loginModal').classList.remove('hidden');
+});
+document.getElementById('loginProfileBtn').addEventListener('click', function() {
+document.getElementById('profileModal').classList.add('hidden');
+document.getElementById('loginModal').classList.remove('hidden');
+});
+// Login form submission
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+e.preventDefault();
+document.getElementById('loginModal').classList.add('hidden');
+});
+// Order History button
+document.getElementById('orderHistoryBtn').addEventListener('click', function() {
+updateOrderHistory();
+document.getElementById('orderHistoryModal').classList.remove('hidden');
+});
+// Profile buttons
+document.getElementById('profileBtn').addEventListener('click', function() {
+document.getElementById('profileModal').classList.remove('hidden');
+});
+document.getElementById('profileNavBtn').addEventListener('click', function() {
+document.getElementById('profileModal').classList.remove('hidden');
+});
+// Function to update order history display
+function updateOrderHistory() {
+const orderList = document.getElementById('orderList');
+if (orders.length === 0) {
+orderList.innerHTML = `
+<div class="text-center text-gray-500 py-8">
+<div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
+<i class="ri-shopping-bag-line ri-2x text-gray-400"></i>
+</div>
+<p>No orders yet</p>
+</div>
+`;
+return;
+}
+orderList.innerHTML = '';
+orders.forEach(order => {
+const orderItem = document.createElement('div');
+orderItem.className = 'border rounded-lg p-3';
+orderItem.innerHTML = `
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm font-medium">Order #${order.id}</span>
+<span class="text-xs text-gray-500">${order.date.toLocaleDateString()}</span>
+</div>
+<div class="flex items-center mb-3">
+<div class="w-16 h-16 bg-gray-100 rounded-md mr-3" style="background-image: url(${order.product.image}); background-size: cover; background-position: center;"></div>
+<div>
+<h4 class="text-sm font-medium">${order.product.name}</h4>
+<div class="flex items-center text-xs text-gray-500 mt-1">
+<span>Size: US ${order.size}</span>
+<span class="mx-2">•</span>
+<span>₹${order.product.price.toLocaleString()}</span>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-xs px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full">${order.status}</span>
+<span class="text-xs text-gray-500">Paid via ${order.paymentMethod}</span>
+</div>
+`;
+orderList.appendChild(orderItem);
+});
+}
+});
+</script>
+</body>
+</html>
